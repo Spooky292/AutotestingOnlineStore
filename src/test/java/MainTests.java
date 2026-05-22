@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -12,7 +13,7 @@ public class MainTests {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://intershop5.skillbox.ru");
     }
@@ -30,9 +31,6 @@ public class MainTests {
         assertTrue("Блок 'Распродажа' не найден.", promotionsHeader.isDisplayed());
         var newArrivalsHeader = driver.findElement(By.xpath("//h2[text()='Новые поступления']"));
         assertTrue("Блок 'Новые поступления' не найден.", newArrivalsHeader.isDisplayed());
-        // Не удалось выполнить проверку на наличие блока "Просмотренные товары", авто тест не находит блок, но в браузере он находится.
-//         var viewedProductsHeader = driver.findElement(By.xpath("//aside[contains(@id, 'woocommerce_recently_viewed_products-2')]//h2[text()='Просмотренные товары']"));
-//         assertTrue("Блок 'Просмотренные товары' не найден.", viewedProductsHeader.isDisplayed());
     }
 
     @Test

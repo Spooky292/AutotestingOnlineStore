@@ -1,3 +1,4 @@
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -17,7 +18,7 @@ public class RegistrationTests {
 
     @Before
     public void setUp() {
-        System.setProperty("webdriver.chrome.driver", "drivers\\chromedriver.exe");
+        WebDriverManager.chromedriver().setup();
         driver = new ChromeDriver();
         driver.get("https://intershop5.skillbox.ru");
     }
@@ -72,7 +73,7 @@ public class RegistrationTests {
         driver.findElement(By.cssSelector(".custom-register-button")).click();
         driver.findElement(By.id("reg_username")).sendKeys(USERNAME);
         driver.findElement(By.id("reg_email")).sendKeys(EMAIL);
-        driver.findElement(By.id("reg_password")).sendKeys("123"); // Пароль может быть случайным, зависит от логики теста
+        driver.findElement(By.id("reg_password")).sendKeys("123"); // Пароль может быть любым, зависит от логики теста
         driver.findElement(By.name("register")).click();
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
         var actualErrorMessage = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//ul[contains(@class, 'woocommerce-error')]"))).getText();
