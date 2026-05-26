@@ -1,6 +1,7 @@
 ## Описание ##
 Набор автоматизированных тестов для интернет‑магазина охватывает регистрация/авторизация, поиск, категории, карточки товаров, корзина, оформление и оплата заказа. 
 Выполнены проверки UI, smoke и регрессионное тестирование.
+
 Репозиторий: https://github.com/Spooky292/AutotestingOnlineStore/tree/master
 
 ## Технологии ##
@@ -17,8 +18,8 @@
   4. MainTests.java
   5. MakingAnOrderTests.java
   6. RegistrationTests.java
-- README.md
 - .gitignore
+- README.md
 - pom.xml
 
 ## Покрытие тестами ##
@@ -28,11 +29,12 @@
   что предыдущие функции работают корректно и не возникло новых ошибок в ранее работавшем функционале.
 
 ## Установка и запуск ##
-1. Скачать ZIP архив нажатием на кнопку "Code", а затем "Download ZIP" или 
-   клонировать репозиторий git clone https://github.com/Spooky292/AutotestingOnlineStore.git
-2. Перейти в папку проекта: AutotestingOnlineStore
-3. Открыть в IntelliJ IDEA (File → Open → папка проекта). (Убедитесь, что установлен JDK 17)
-4. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' или запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
+1. Скачать ZIP архив нажатием на кнопку "Code", а затем "Download ZIP" или   
+клонировать репозиторий git clone https://github.com/Spooky292/AutotestingOnlineStore.git
+4. Перейти в папку проекта: AutotestingOnlineStore
+5. Открыть в IntelliJ IDEA (File → Open → папка проекта). (Убедитесь, что установлен JDK 17)
+6. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' 
+или запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
 
 ## Переменное окружение ##
 - BASE_URL - https://intershop5.skillbox.ru
