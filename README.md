@@ -29,11 +29,12 @@
   что предыдущие функции работают корректно и не возникло новых ошибок в ранее работавшем функционале.
 
 ## Установка и запуск ##
-1. Скачать ZIP архив нажатием на кнопку "Code", а затем "Download ZIP" или   
+1. Скачать ZIP архив нажатием на кнопку "Code", а затем "Download ZIP" или        
 клонировать репозиторий git clone https://github.com/Spooky292/AutotestingOnlineStore.git
 4. Перейти в папку проекта: AutotestingOnlineStore
 5. Открыть в IntelliJ IDEA (File → Open → папка проекта). (Убедитесь, что установлен JDK 17)
-6. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' или запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
+6. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' или          
+запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
 
 ## Переменное окружение ##
 - BASE_URL - https://intershop5.skillbox.ru
