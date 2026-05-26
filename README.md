@@ -34,7 +34,7 @@
 4. Перейти в папку проекта: AutotestingOnlineStore
 5. Открыть в IntelliJ IDEA (File → Open → папка проекта). (Убедитесь, что установлен JDK 17)
 6. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' 
-или запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
+или   запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
 
 ## Переменное окружение ##
 - BASE_URL - https://intershop5.skillbox.ru
