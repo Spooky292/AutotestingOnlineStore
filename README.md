@@ -17,6 +17,7 @@
   4. MainTests.java
   5. MakingAnOrderTests.java
   6. RegistrationTests.java
+- README.md
 - .gitignore
 - pom.xml
 
