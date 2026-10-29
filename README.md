@@ -25,9 +25,12 @@
 5. **`MakingAnOrderTests.java`** — сквозная проверка оформления заказа и перехода к оплате.
 
 ### ⚙️ Тестовый стенд (Sandbox) и запуск
-В соответствии с правилами безопасности и профессиональной этикой QA, публичные демонстрационные сценарии не запускаются на рабочих серверах клиентов во избежание паразитной нагрузки. Проект настроен для работы на открытом тестовом полигоне:
-* **BASE_URL:** `https://skillbox.ru` (Публичный демо-стенд)
-* **Запуск из консоли:** `mvn test -Dbase.url=https://skillbox.ru`
+В соответствии с правилами безопасности и профессиональной этикой QA, публичные демонстрационные сценарии не запускаются на рабочих серверах клиентов во избежание паразитной нагрузки. Для обеспечения 100% воспроизводимости проверок проект настроен для работы на открытом тестовом полигоне интернет-магазина:
+* **BASE_URL:** `https://intershop5.skillbox.ru` (Публичный демо-стенд)
+* **Запуск из консоли:** `mvn test -Dbase.url=https://intershop5.skillbox.ru`
+
+---
+📫 **Контакты для заказа тестирования:** Telegram `@Davidx5`
 
 ---
 
@@ -53,8 +56,8 @@ A comprehensive suite of automated UI, Smoke, and Regression tests designed to v
 
 ### ⚙️ Sandbox Environment & Execution
 In accordance with QA ethics and security best practices, public demo scripts are not executed against live client production servers to avoid unnecessary traffic load. To ensure 100% test reproducibility, this suite runs against a dedicated public E-Commerce sandbox environment:
-* **BASE_URL:** `https://skillbox.ru` (Public QA Sandbox)
-* **Run via CLI:** `mvn test -Dbase.url=https://skillbox.ru`
+* **BASE_URL:** `https://intershop5.skillbox.ru` (Public QA Sandbox)
+* **Run via CLI:** `mvn test -Dbase.url=https://intershop5.skillbox.ru`
 
 ---
-📧 **Contact for QA & Development inquiries:** Telegram `@Davidx5`
+📧 **Contact for QA:** Telegram `@Davidx5`
