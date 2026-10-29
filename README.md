@@ -1,48 +1,60 @@
-## Описание ##
-Набор автоматизированных тестов для интернет‑магазина охватывает регистрация/авторизация, поиск, категории, карточки товаров, корзина, оформление и оплата заказа. 
-Выполнены проверки UI, smoke и регрессионное тестирование.
+# 🛒 Автоматизированное тестирование E-Commerce платформы | E-Commerce QA Automation
 
-Репозиторий: https://github.com/Spooky292/AutotestingOnlineStore/tree/master
+🌐 **Language / Язык:** [🇷🇺 Русский](#-описание-проекта-ru) | [🇬🇧 English](#-project-overview-en)
 
-## Технологии ##
-- Язык: Java 11+  
-- Тест‑фреймворк: JUnit 4
-- Сборщик: Maven (pom.xml) (JDK 17)
-- Инструменты: Selenium WebDriver, ChromeDriver, Chrome DevTools, IntelliJ IDEA, GitHub, GitLab, Jira.
+---
 
-## Структура проекта ##
-- src/test/java
-  1. AuthorizationTests.java
-  2. BasketTests.java
-  3. CatalogTests.java
-  4. MainTests.java
-  5. MakingAnOrderTests.java
-  6. RegistrationTests.java
-- .gitignore
-- README.md
-- pom.xml
+## 🇷🇺 Описание проекта (RU)
 
-## Покрытие тестами ##
-- UI: Тесты проверяют ключевые сценарии, такие как автоматизированный ввод данных в формы заполнения, взаимодействие с кнопками, выпадающие списки.
-- Smoke: Тесты проверяют, возможность регистрации/авторизации в системе и добавления товара в корзину. 
-- Регрессионное тестирование: Выполнение уже созданных автотестов после нового релиза сайта для проверки, 
-  что предыдущие функции работают корректно и не возникло новых ошибок в ранее работавшем функционале.
+Комплексный набор автотестов (UI, Smoke, Regression) для проверки критически важных бизнес-сценариев интернет-магазина: от регистрации пользователя до успешного оформления заказа в корзине.
 
-## Установка и запуск ##
-1. Скачать ZIP архив нажатием на кнопку "Code", а затем "Download ZIP" или        
-клонировать репозиторий git clone https://github.com/Spooky292/AutotestingOnlineStore.git
-4. Перейти в папку проекта: AutotestingOnlineStore
-5. Открыть в IntelliJ IDEA (File → Open → папка проекта). (Убедитесь, что установлен JDK 17)
-6. Запустить тест в IDEA: правой кнопкой по классу → Run '<testName>' или          
-запустить из консоли: mvn test -Dbase.url=https://intershop5.skillbox.ru
+**Бизнес-задача:** Продемонстрировать чистую архитектуру автотестов, стабильность локаторов и подход к защите интернет-магазинов от потери прибыли из-за технических багов после обновлений.
 
-## Переменное окружение ##
-- BASE_URL - https://intershop5.skillbox.ru
-- BROWSER - Chrome (Применяется для запуска тестов)
-- ENV - Prod
-- TOKEN - Не требуется
+### 🛠 Стек технологий
+* **Язык программирования:** Java 17 (JDK 17)
+* **Тест-фреймворк:** JUnit 4
+* **Сборщик проекта:** Maven (`pom.xml`)
+* **Автоматизация браузера:** Selenium WebDriver, ChromeDriver
+* **Инструменты отладки:** Chrome DevTools, IntelliJ IDEA, Jira, Git
 
-## Отчёты ##
-Результат появится в отдельном окне с цветовой индикацией успешности тестов.
-- Зелёная галочка означает успешное прохождение ✅
-- Значок ошибки означает не успешное прохождение ⚠️
+### 📂 Архитектура тестов (`src/test/java`)
+1. **`RegistrationTests.java`** — проверка создания аккаунта и валидация полей.
+2. **`AuthorizationTests.java`** — тестирование входа в систему и обработки ошибок доступа.
+3. **`CatalogTests.java` & `MainTests.java`** — проверка витрины, поиска, фильтрации и карточек товаров.
+4. **`BasketTests.java`** — тестирование добавления/удаления товаров, пересчета сумм и промокодов.
+5. **`MakingAnOrderTests.java`** — сквозная проверка оформления заказа и перехода к оплате.
+
+### ⚙️ Тестовый стенд (Sandbox) и запуск
+По правилам безопасности и этики тестирования мы не запускаем публичные демонстрационные скрипты на боевых сайтах клиентов, чтобы не создавать паразитную нагрузку на их серверы. Проект настроен на открытом учебно-тренировочном полигоне:
+* **BASE_URL:** `https://skillbox.ru` (Публичный демо-стенд)
+* **Запуск из консоли:** `mvn test -Dbase.url=https://skillbox.ru`
+
+---
+
+## 🇬🇧 Project Overview (EN)
+
+A comprehensive suite of automated UI, Smoke, and Regression tests designed to verify mission-critical user journeys in an E-Commerce web application — from user registration to checkout and payment processing.
+
+**Business Goal:** Showcase scalable test automation architecture, robust element locators, and QA methodology for preventing revenue loss caused by post-release regression bugs.
+
+### 🛠 Tech Stack & Tools
+* **Language:** Java 17 (JDK 17)
+* **Testing Framework:** JUnit 4
+* **Build Tool:** Maven (`pom.xml`)
+* **Web Automation:** Selenium WebDriver, ChromeDriver
+* **Debugging & Tracking:** Chrome DevTools, IntelliJ IDEA, Jira, Git
+
+### 📂 Test Suite Structure (`src/test/java`)
+1. **`RegistrationTests.java`** — user sign-up flow and input field validation.
+2. **`AuthorizationTests.java`** — login functionality and invalid credential handling.
+3. **`CatalogTests.java` & `MainTests.java`** — product catalog rendering, search bar, filtering, and item cards.
+4. **`BasketTests.java`** — shopping cart operations, price calculation, and promo code application.
+5. **`MakingAnOrderTests.java`** — end-to-end (E2E) checkout process and payment gateway redirection.
+
+### ⚙️ Sandbox Environment & Execution
+In accordance with QA ethics and security best practices, public demo scripts are not executed against live client production servers to avoid unnecessary traffic load. To ensure 100% test reproducibility, this suite runs against a dedicated public E-Commerce sandbox environment:
+* **BASE_URL:** `https://skillbox.ru` (Public QA Sandbox)
+* **Run via CLI:** `mvn test -Dbase.url=https://skillbox.ru`
+
+---
+📧 **Contact for QA & Development inquiries:** Telegram `@Davidx5`
