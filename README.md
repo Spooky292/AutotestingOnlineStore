@@ -60,4 +60,4 @@ In accordance with QA ethics and security best practices, public demo scripts ar
 * **Run via CLI:** `mvn test -Dbase.url=https://intershop5.skillbox.ru`
 
 ---
-📧 **Contact for QA:** Telegram `@Davidx5`
+📧 **Contact for QA inquiries:** Telegram `@Davidx5`
